@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Demo E-Commerce Clothing Store with React, Redux(incl. Redux-Saga), Firebase, Stripe and Tailwind CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple demo e-commerce store where users can add or remove products from shopping cart and buy products with their cards. Even if users leave the site, the products in their shopping cart will remain when they return.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+<p align="left">
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" title="React JS" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/redux-colored.svg" width="36" height="36" alt="Redux" title="Redux" />
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" title="Tailwind CSS"/>
+<img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" title="Firebase" />
+</p>
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Account creation with email or sign in with existing Google account
+- Add or remove products from shopping cart
+- Persist products inside of shopping cart even when refresh the page
+- Payment with Stripe
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+[Demo Link](https://bright-alpaca-35a3de.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can use test account information to try my demo
 
-### `npm run build`
+Email: test@test.com
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Password: 12345678
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![App Screenshot](screenshot-1.png)
 
-### `npm run eject`
+![App Screenshot](screenshot-2.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![App Screenshot](screenshot-3.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clone the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  git clone https://github.com/aniltulebag/my-expenses.git
+```
 
-## Learn More
+Go to the project directory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  cd my-expenses
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Install dependencies
 
-### Code Splitting
+```bash
+  npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Start the server
 
-### Analyzing the Bundle Size
+```bash
+  npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Environment Variables
 
-### Making a Progressive Web App
+To run this project, you will need to add the following environment variables to your .env file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`REACT_APP_API_KEY`
 
-### Advanced Configuration
+`REACT_APP_AUTH_DOMAIN`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+`REACT_APP_PROJECT_ID`
 
-### Deployment
+`REACT_APP_STORAGE_BUCKET`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+`REACT_APP_MESSAGING_SENDER_ID`
 
-### `npm run build` fails to minify
+`REACT_APP_APP_ID`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Setup a new [Firebase](https://console.firebase.google.com/) project and update environment variables with your new Firebase web app config information.
+
+`REACT_APP_STRIPE_PUBLISHABLE_KEY`
+
+`STRIPE_SECRET_KEY`
+
+Sign up for a [Stripe account](https://dashboard.stripe.com) if you haven't already, login and navigate to the Developers > API Keys section. Grab your keys and define it in .env file
+
+## Development
+
+To test payment with Stripe
+
+```bash
+  npm run netlify-login
+  # after then
+  npm run netlify-dev
+```
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run build
+```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
