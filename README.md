@@ -41,13 +41,13 @@ Password: 12345678
 Clone the project
 
 ```bash
-  git clone https://github.com/aniltulebag/my-expenses.git
+  git clone https://github.com/aniltulebag/react-clothing-store.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-expenses
+  cd react-clothing-store
 ```
 
 Install dependencies
